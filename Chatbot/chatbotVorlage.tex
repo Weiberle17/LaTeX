@@ -8,7 +8,7 @@
 \input{template/_dhbw_praeambel.tex}
 
 %%% Name der eigenen Literatur-Datenbank (ggf. anpassen) %%%
-\bibliography{includes/literatur-datenbank.bib}
+\bibliography{includes/chatbot.bib}
 
 \begin{document}
 %%% Deckblatt einbinden %%% 
@@ -18,16 +18,12 @@
 %%% Umstellung der Seiten-Nummerierung auf i, ii, iii ... %%%
 \pagenumbering{Roman} 
 
-%%% Abstract einbinden (optionale Kurzfassung Ihrer Arbeit) %%%
-\input{includes/abstract.tex}
 \cleardoublepage
 
 %%% Inhalts-, Abbildungs-, Tabellenverzeichnisse %%%
 % sollen einzeilig gesetzt werden, um Platz zu sparen 
 \begin{spacing}{1}
 \tableofcontents
-\clearpage
-\input{includes/abkuerzungen.tex}
 
 \clearpage
 \thispagestyle{kapitelkopfzeile}
@@ -35,10 +31,6 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis} % Abb.verz. ins Inh.verz. aufnehmen
 
-\clearpage
-\listoftables
-\phantomsection
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}   % Tab.verz. ins Inh.verz. aufnehmen
 \end{spacing}
 
 %%% Umstellung der Seiten-Nummerierung auf 1, 2, 3 ... %%%
@@ -49,13 +41,10 @@
 % Empfehlung: strukturieren Sie Ihren Text in einzelnen Dateien 
 % und binden Sie diese hier mit \input{includes/dateiname.tex} ein
 
-\input{includes/einleitung.tex}
-\blinddocument
-\input{includes/text_mit_zitaten.tex}
-\input{includes/abbildungen_und_tabellen.tex}
+\input{includes/KapitelEins.tex}
+\input{includes/KapitelZwei.tex}
+\input{includes/KapitelDrei.tex}
 
-\input{includes/anhang.tex}
-\input{includes/release_notes.tex}
 %%% Ende des eigentlichen Inhalts %%%
 
 
