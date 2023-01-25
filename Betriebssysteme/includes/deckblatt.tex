@@ -1,0 +1,98 @@
+% HIER EDITIEREN: 
+% Typ der Arbeit (für Deckblatt und ehrenwörtliche Erklärung)
+% - bitte Zutreffendes auswählen
+%\newcommand{\typMeinerArbeit}{1. Projektarbeit} 
+%\newcommand{\typMeinerArbeit}{2. Projektarbeit} 
+\newcommand{\typMeinerArbeit}{Seminararbeit} 
+% \newcommand{\typMeinerArbeit}{Bachelorarbeit} 
+
+% Thema der Arbeit (für ehrenwörtliche Erklärung, ohne Umbrüche)
+% HIER EDITIEREN: 
+\newcommand{\themaMeinerArbeit}{Cloud Computing}
+
+% Vorname, Name der Autorin/des Autors (für Titelseite und Metadaten)
+% HIER EDITIEREN:
+\newcommand{\meinName}{Max Weiberle}
+
+\thispagestyle{empty}
+
+\begin{spacing}{1}
+\begin{center}	
+~\vspace{0mm}
+
+% HIER EDITIEREN: Titel der Arbeit
+{\sffamily
+\LARGE  
+% \Large  % bei sehr langen Titeln ggf. etwas kleinere Schriftart wählen
+\textbf{Cloud Computing}
+
+\bigskip
+\textbf{}
+}
+
+
+\vspace{15mm}
+
+% Typ wird automatisch eingefügt (oben festlegen)
+{\Large \typMeinerArbeit}
+
+\vspace{1cm}
+
+% HIER ggf. EDITIEREN
+vorgelegt am 01. Juli 2022
+
+\vspace{15mm}
+
+Fakultät Wirtschaft
+\medskip
+
+Studiengang Wirtschaftsinformatik
+\medskip
+
+% HIER EDITIEREN: Kurs eintragen
+Kurs WWI2021G
+
+\vspace{10mm}
+
+von
+
+\vspace{10mm}
+
+% Vorname und Name wird automatisch eingefügt (oben festlegen) 
+{\large\textsc{\meinName}}
+
+\vspace{10mm}
+\end{center}
+
+\vfill
+
+% HIER EDITIEREN: Name des Unternehmens, Name der Betreuerin/des Betreuers
+\begin{tabular}{ll}
+Betreuer in der Ausbildungsstätte: & DHBW Stuttgart: \\
+\hspace{0.4\linewidth} & \\
+Komm.ONE &  Samer Musa \\
+Stefan Fuchs \\
+Studierendenbetreuer \\
+\\
+Unterschrift des Betreuers \\
+\end{tabular}
+
+
+\vspace{1cm}
+%(etwas Platz für die Unterschrift der Betreuerin/des Betreuers aus der Ausbildungsstätte)
+\end{spacing}
+
+% falls ein Vertraulichkeitsvermerk erforderlich ist,
+% die Kommentarzeichen in den nachfolgenden Zeilen entfernen:
+ 
+%\begin{center}
+%\small
+%\textbf{Vertraulichkeitsvermerk}:
+%Der Inhalt dieser Arbeit darf weder als Ganzes noch in Auszügen \\
+%Personen außerhalb des Prüfungs- und Evaluationsverfahrens zugänglich gemacht werden, sofern keine anders lautende Genehmigung des Dualen Partners vorliegt. 
+%\end{center}
+
+% Meta-Daten für PDF-Datei basierend auf obigen Angaben
+\hypersetup{pdftitle={\themaMeinerArbeit}}
+\hypersetup{pdfauthor={\meinName}}
+\hypersetup{pdfsubject={\typMeinerArbeit\ DHBW Stuttgart \the\year}}
