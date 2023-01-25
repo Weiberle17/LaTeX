@@ -1,0 +1,29 @@
+\chapter{Firewalls und VPN} % (fold)
+\label{cha:Firewalls und VPN}
+
+Um die Rolle, die VPN in nahezu allen Unternehmen spielt verstehen zu können, müssen erst ein paar grundlegende Informationen zu Netzwerken erläutert und verstanden werden.
+
+\section{Firewalls} % (fold)
+\label{sec:Firewalls}
+
+Grundsätzlich ist eine Firewall alles, Hardware, Software oder eine Kombination aus beidem, was die Übertragung von digitalen Paketen filtern kann. Dem liegen zwei Sicherheitsfunktionen zu Grunde:
+
+\begin{description}
+  \item Filtern von Paketen: Digitale Pakete, die durch die Firewall in das zu schützende Netzwerk hinein, aber auch aus dem zu schützenden Netzwerk hinaus wollen werden auf Basis der erstellten Sicherheitsregeln gefiltert. 
+  \item Anwendungsproxy: Schützt individuelle Computer und ermöglicht dennoch das Nutzen von Netzwerkdiensten. Hierfür wird der IP-Informationsfluss unterbrochen. \footcite[Vgl.][S. 99]{WHITMAN.2018}
+\end{description}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=9cm]{graphics/dhbw.png}
+  \caption[Idee eines Firewall-Systems]{Idee eines Firewall-Systems. \footnotemark}
+  \label{abb:Firewall}
+\end{figure}
+\footnotetext{Entnommen aus: \cite[S. 357]{Pohlmann.2022}}
+
+In Abbildung eins ist die erste Funktion gut zu erkennen. Die Firewall lässt die grüne Verbindung durch, weil sie nach den Sicherheitsrichtlinien in Ordnung ist, während die orangene Linie abgeblockt wird. Ein schöner Vergleich ist hier der Pförtner oder Sicherheitspersonal am Eingang. Sie kümmern sich darum, dass die bestehenden Regeln eingehalten werden. Alle Personen müssen durch dafür vorgesehene Bereiche das Gebäude betreten oder verlassen, werden auf ihre Zugangsberechtigung geprüft und müssen durch einen Metalldetektor gehen und potenziell gefährliche Dinge abgeben. Falls es zu einem Sicherheitsfehler kommt und eine Person die Kontrolle umgeht muss eine Warnung ausgegeben werden und ein anderes Team sich um das Problem kümmern. Analog dazu funktioniert auch die Firewall, welche kontrolliert über welche Protokolle und Dienste zugegriffen wird und wer mit wem kommunizieren darf. All diese Daten werden protokolliert. \footnotemark
+\footnotetext{Vgl. \cite[S. 100]{WHITMAN.2018} und \cite[S. 358]{Pohlmann.2022}}
+
+% section Firewalls (end)
+
+% chapter (end)
