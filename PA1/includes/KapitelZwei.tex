@@ -9,21 +9,67 @@ Um die Rolle, die VPN in nahezu allen Unternehmen spielt verstehen zu können, m
 Grundsätzlich ist eine Firewall alles, Hardware, Software oder eine Kombination aus beidem, was die Übertragung von digitalen Paketen filtern kann. Dem liegen zwei Sicherheitsfunktionen zu Grunde:
 
 \begin{description}
-  \item Filtern von Paketen: Digitale Pakete, die durch die Firewall in das zu schützende Netzwerk hinein, aber auch aus dem zu schützenden Netzwerk hinaus wollen werden auf Basis der erstellten Sicherheitsregeln gefiltert. 
-  \item Anwendungsproxy: Schützt individuelle Computer und ermöglicht dennoch das Nutzen von Netzwerkdiensten. Hierfür wird der IP-Informationsfluss unterbrochen. \footcite[Vgl.][S. 99]{WHITMAN.2018}
+	\item Filtern von Paketen: Digitale Pakete, die durch die Firewall in das zu schützende Netzwerk hinein, aber auch aus dem zu schützenden Netzwerk hinaus wollen werden auf Basis der erstellten Sicherheitsregeln gefiltert.
+	\item Anwendungsproxy: Schützt individuelle Computer und ermöglicht dennoch das Nutzen von Netzwerkdiensten. Hierfür wird der IP-Informationsfluss unterbrochen. \footcite[Vgl.][S. 99]{WHITMAN.2018}
 \end{description}
 
 \begin{figure}[htb]
-  \centering
-  \includegraphics[width=9cm]{graphics/dhbw.png}
-  \caption[Idee eines Firewall-Systems]{Idee eines Firewall-Systems. \footnotemark}
-  \label{abb:Firewall}
+	\centering
+	\includegraphics[width=9cm]{graphics/dhbw.png}
+	\caption[Idee eines Firewall-Systems]{Idee eines Firewall-Systems. \footnotemark}
+	\label{abb:Firewall}
 \end{figure}
 \footnotetext{Entnommen aus: \cite[S. 357]{Pohlmann.2022}}
 
-In Abbildung eins ist die erste Funktion gut zu erkennen. Die Firewall lässt die grüne Verbindung durch, weil sie nach den Sicherheitsrichtlinien in Ordnung ist, während die orangene Linie abgeblockt wird. Ein schöner Vergleich ist hier der Pförtner oder Sicherheitspersonal am Eingang. Sie kümmern sich darum, dass die bestehenden Regeln eingehalten werden. Alle Personen müssen durch dafür vorgesehene Bereiche das Gebäude betreten oder verlassen, werden auf ihre Zugangsberechtigung geprüft und müssen durch einen Metalldetektor gehen und potenziell gefährliche Dinge abgeben. Falls es zu einem Sicherheitsfehler kommt und eine Person die Kontrolle umgeht muss eine Warnung ausgegeben werden und ein anderes Team sich um das Problem kümmern. Analog dazu funktioniert auch die Firewall, welche kontrolliert über welche Protokolle und Dienste zugegriffen wird und wer mit wem kommunizieren darf. All diese Daten werden protokolliert. \footnotemark
+In Abbildung \ref{abb:Firewall} ist die erste Funktion gut zu erkennen. Die Firewall lässt die grüne Verbindung durch, weil sie nach den Sicherheitsrichtlinien in Ordnung ist, während die orangene Linie abgeblockt wird. Ein schöner Vergleich ist hier der Pförtner oder Sicherheitspersonal am Eingang. Sie kümmern sich darum, dass die bestehenden Regeln eingehalten werden. Alle Personen müssen durch dafür vorgesehene Bereiche das Gebäude betreten oder verlassen, werden auf ihre Zugangsberechtigung geprüft und müssen durch einen Metalldetektor gehen und potenziell gefährliche Dinge abgeben. Falls es zu einem Sicherheitsfehler kommt und eine Person die Kontrolle umgeht muss eine Warnung ausgegeben werden und ein anderes Team sich um das Problem kümmern. Analog dazu funktioniert auch die Firewall, welche kontrolliert über welche Protokolle und Dienste zugegriffen wird und wer mit wem kommunizieren darf. All diese Daten werden protokolliert. \footnotemark
 \footnotetext{Vgl. \cite[S. 100]{WHITMAN.2018} und \cite[S. 358]{Pohlmann.2022}}
 
+Folgende Aufgaben haben Firewall-Systeme im Allgemeinen:
+
+\begin{itemize}
+	\item Einschränken von Zugriffen von außerhalb des Netzwerks: Die offensichtlichste Gefahr ist der Angriff von außerhalb auf das eigene Netzwerk. Aus diesem Grund muss eine Firewall jedes einzelne Paket auf die individuell festgelegten Regeln überprüfen.
+	\item Einschränken von unautorisierten Zugriffen von innerhalb des Netzwerks: In manchen Fällen ist es einfacher ein Netzwerk vor äußeren Einflüssen zu schützen als vor den Gefahren, die von unaufmerksamen Arbeitnehmern ausgehen können. Besonders zu beachten sind hier beispielsweise mobile Datenträger, die infizierte Dateien in das System einschleusen können. Besonders häufig kommen auch E-Mail Angriffe mit infizierten, oder ausführbaren Dateien, die beim Herunterladen oder Ausführen das gesamte Netzwerk betreffen können.
+	\item Zugangskontrolle auf Nutzerebene: Es wird überprüft, welche Nutzer über das Firewall-System mit welchen Systemen kommunizieren dürfen.
+	\item Zugangskontrolle auf Datenebene: Es wird überprüft, welche Daten eines definierten Nutzers und Systems über das Firewall-System übertragen werden dürfen.
+	\item Rechteverwaltung: Es wird festgelegt, mit welchen Protokollen und Diensten und zu welchen Zeiten über das Firewall-System kommuniziert werden darf.
+	\item Kontrolle auf Anwendungsebene: Es wird überprüft, ob Aktivitäten stattfinden, die nicht zu Anwendungen oder definierten Aufgabenstellungen gehören, generell unerwünscht sind oder Schaden am System verursachen können. Beispiele hierfür wären Spam oder Malware.
+	\item Entkopplung von Diensten: Dienste werden vom Netzwerk entkoppelt, um zu verhindern, dass Fehler oder Sicherheitslücken der einzelnen Dienste zu erfolgreichen Angriffen führen können.
+	\item Beweissicherung und Protokollauswertung: Jegliche Verbindungen und sicherheitsrelevante Ereignisse werden protokolliert. Diese können für die Erkennung von Sicherheitsverletzungen und zur Beweissicherung von Handlungen der Nutzer ausgewertet werden.
+	\item Alarmierung: Besondere sicherheitsrelevante Ereignisse werden dem Security-Management gemeldet, so dass im Ernstfall schnell gehandelt werden kann.
+	\item Verbergen der internen Netzstruktur: Im Idealfall ist aus dem unsicheren Netz heraus nicht zu erkennen, wie das zu schützende Netz strukturiert ist oder wie viele Systeme sich in diesem Netz befinden. \footnotemark
+\end{itemize}
+\footnotetext{Vgl. \cite{WHITMAN.2018} S. 103 ff. und \cite{Pohlmann.2022} S. 359 f.}
+
+Allerdings ist es bei Weitem nicht mit einer Firewall getan. Um die Sicherheit eines Netzwerkes so hoch wie möglich zu halten, müssen mehrere Sicherheitssysteme zusammenarbeiten.
+
 % section Firewalls (end)
+
+\section{VPN} % (fold)
+\label{sec:VPN}
+
+Ein weiterer Schritt um das zu schützende Netz sicherer zu machen, aber vor allem auch um ganz neue Möglichkeit zu eröffnen ist das Einrichten von VPN-Verbindungen. Diese Technologie ermöglicht nicht nur einen Zusammenschluss von zwei Netzwerken, die an verschiedenen geografischen Standorten existieren. Zunehmend gewinnt auch die Verwendung im Bereich von Homeoffice immer mehr an Relevanz. VPN ermöglicht es mehrere Netzwerke, wie in Abbildung \ref{abb:VPN-Modell} dargestellt, oder Geräte zu einem Netzwerk zusammenzufassen, ohne dass sie nebeneinander sein müssen oder durch ein Kabel verbunden werden. In den allermeisten Fällen wird das Internet als Verbindung zwischen den Netzwerken oder Geräten verwendet. Hier wird die Verbindung über ein unsicheres Netz mit einem Tunnel dargestellt. Um diese Verbindungen brauchbar und sicher zu machen, ist eine Verschlüsselung essentiell. \footcite[Vgl.][S. 261 ff.]{WHITMAN.2018}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=12cm]{graphics/dhbw.png}
+	\caption[Vereinfachtes Modell eines VPN-Aufbaus]{Vereinfachtes Modell eines VPN-Aufbaus \footnotemark}
+	\label{abb:VPN-Modell}
+\end{figure}
+\footnotetext{Entnommen aus: \cite{WHITMAN.2018} S. 296}
+
+Die Verschlüsselung kann bildlich wie ein Tunnel verstanden werden und eine VPN-Verbindung wird häufig auch als VPN-Tunnel bezeichnet. Die beiden Router mit IPSec zeigen genau diese Verschlüsselung. IPSec ist eine in der IT weit verbreitete Verschlüsselungsmethode und der aktuelle Standard. \footnotemark
+\footnotetext{Vgl. \cite{o.V..2020} und \cite{Pohlmann.2022} S. 403 ff. auch im Folgenden}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=10cm]{graphics/dhbw.png}
+	\caption[Realisierungsformen von IPSec]{Realisierungsformen von IPSec \footnotemark}
+	\label{abb:IPSec}
+\end{figure}
+\footnotetext{Entnommen aus: \cite{Pohlmann.2022} S. 411}
+
+Für einen Verbindungsaufbau werden, wie in Abbildung \ref{abb:IPSec} dargestellt, entweder zwei IPSec-Clients, zwei IPSec-Gateways oder jeweils ein Gateway und ein Client benötigt.
+
+% section VPN (end)
 
 % chapter (end)
