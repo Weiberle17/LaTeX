@@ -1,0 +1,51 @@
+\chapter{Ausblick und Fazit} % (fold)
+\label{cha:Ausblick und Fazit}
+
+\section{Zeitlicher Rahmen} % (fold)
+\label{sec:Zeitlicher Rahmen}
+
+Leider erstreckt sich meine Praxisphase nur bis Anfang September. Aus diesem Grund werde ich nicht mehr Teil der tatsächlichen Umsetzung der Harmonisierung sein.
+
+Aktuell füllen wir parallel die Entscheidungsvorlage der Firma aus, die bei Umstellungen oder Entscheidungen dieser Größe zum Tragen kommt. Die Inhalte dieser Entscheidungsvorlage basieren zu großen Teilen auf den Erkenntnissen der entstandenen Nutzwertanalyse. Sie wird aller Voraussicht nach ebenfalls Anfang September eingereicht. Abhängig von der benötigten Zeit für eine Genehmigung und natürlich vorausgesetzt ihr wird stattgegeben, kann dann die konkrete Planung für eine Umsetzung beginnen. Wann es dann final auf die Umsetzung zugeht, lässt sich zu diesem Zeitpunkt noch nicht sagen, angepeilt ist aber definitiv noch im Jahr 2022.
+
+Ein grober unausgearbeiteter Plan existiert bereits. 
+
+% section Zeitlicher Rahmen (end)
+
+\section{Umsetzung in Teilschritten} % (fold)
+\label{sec:Umsetzung in Teilschritten}
+
+Folgender Ablauf ist bis jetzt grob geplant:
+\begin{description}
+  \item Ankündigung: In hauseigenen Newsletter, oder in separaten E-Mails wird über die Umstellung berichtet und das weitere Vorgehen erklärt.
+  \item Infrastruktur: Das bestehende VPN-Netz muss erweitert werden, um alle neuen Clients aufnehmen zu können. Außerdem muss das Netz getestet werden, da eine performante Umstellung gewährleistet werden muss. In Folge dessen wird ein Checkpoint-VPN Hoch-Verfügbarkeits-Aufbau in Karlsruhe entstehen, der zusammen mit dem zweiten Aufbau in Stuttgart für gute Performance an allen Standorten oder Homeoffice-Arbeitsplätzen sorgt und Standort unabhängige Redundanz garantiert.
+  \item Firewall: Mit Hilfe von AD-Gruppen muss die Firewallfreischaltung so erfolgen, dass alle Mitarbeiter die benötigten Zugriffe bekommen.
+  \item Anleitung: Erstellen einer Anleitung zur Einrichtung bzw. zum Umstieg von einem der anderen Clienten zu Checkpoint-VPN, sodass möglichst viele Mitarbeiter ihren eigenen Zugang einrichten können. Diese Anleitung wird zusammen mit der Tokenbereitstellung und der Softwareverteilung an alle beteiligten Mitarbeiter versendet.
+  \item Softwareverteilung: Der Checkpoint-VPN Client wird parallel zu den zuvor installierten Clients installiert. Dies wird über die firmeninterne Softwareverteilung via Baramundi erfolgen.
+  \item Tokenbereitstellung: Parallel zur Softwareverteilung beginnt das Ausrollen der Softwaretokens. Dies erfolgt per E-Mail. Die jeweilige E-Mail beinhaltet einmalige Zugangsdaten zur Registrierung in einem Webportal und Informationen darüber, wie die App auf dem Handy eingerichtet wird. Auf Wunsch kann in einzelnen Fällen ein Hardwaretoken ausgerollt werden.
+  \item Übergangszeit: In dieser Phase laufen alle drei Lösungen noch immer parallel. Geplant ist eine zweiwöchige Übergangsphase, in der alle Mitarbeiter dazu angehalten sind den Checkpoint-Client auszuprobieren und mögliche Probleme damit zu melden. In der Hoffnung, dass die meisten Mitarbeiter diese Möglichkeit nutzen und ein Großteil der Probleme behoben werden kann, bevor es zu schwerwiegenden Problemen kommt. 
+  \item Abschaltung: Nach Ablauf der Übergangphase wird sowohl der NCP-VPN-Client, als auch der Anyconnect-Client für Mitarbeiter abgeschaltet. Danach kann nach und nach der Rückbau, bzw. die Umstrukturierung der Systeme beginnen.
+  \item Nacharbeit: Nach Ablauf der Übergangsphase werden einige Mitarbeiter noch nichts von der Umstellung mitbekommen haben, geschweige denn den neuen Client getestet haben. Deshalb muss, am ersten Tag besonders, aber auch generell in den darauffolgenden Wochen, so geplant werden, dass genügend Kapazitäten für Probleme, die aus der Umstellung resultieren verfügbar sind. Des Weiteren sollten Mitarbeiter, die im Urlaub sind, oder aus anderen Gründen für einen längeren Zeitraum nicht arbeiten, eingeplant werden, die nach und nach auf Probleme treffen werden.
+\end{description}
+
+% section Umsetzung in Teilschritten (end)
+
+\section{Reflexion} % (fold)
+\label{sec:Reflexion}
+
+Die in dieser Projektarbeit verwendeten Methoden wie Brainstorming, oder die Nutzwertanalyse haben sich als sinnvoll und Erfolg bringend erwiesen. Besonders Brainstorming ist mittlerweile eine sehr verbreitete und im Allgemeinen bekannte Kreativtechnik. Sie eignet sich nicht nur hervorragend zur groben Ideenfindung zu Beginn eines Projekts, sondern kann immer wieder in den Ablauf eingebaut werden, um ein möglichst vollständiges Bild zu erstellen. Sie wird häufig als schnelle, simple und leicht umsetzbare Methode betrachtet, doch das ist weit gefehlt. So einfach der Grundgedanke ist, so schwer kann die richtige Umsetzung sein. \footcite[Vgl. ][]{vanAerssen.2022} In diesem Projekt waren die Brainstorming-Anteile relativ gering und beschränkten sich auf die Kriterienauswahl der Nutzwertanalyse. Dennoch war es sehr sinnvoll die Methode anzuwenden, da ein möglichst differenziertes, aber dennoch vollständiges Bild gefordert wurde. Allerdings ist der enorme Zeitaufwand zu erwähnen, der in diesen Teil der Evaluierung geflossen ist. Nicht das Zusammentragen und Aufschreiben von Ideen kostet Zeit, es ist das Sortieren der Ideen und die damit verbundene Diskussion über einzelne Aspekte.
+
+Die Schwierigkeiten, die das Thema mit sich gebracht hat, haben sich vor allem in der Nutzwertanalyse gezeigt. Da für eine umfangreiche Bewertung nicht nur harte Faktoren in Betracht gezogen werden konnten. Weiche Faktoren machen es insofern schwerer, als dass sie nicht eindeutig zu beziffern sind. Wie die Definition von weichen Faktoren bereits sagt, liegen ihnen keine Kennzahlen zu Grunde, auf die man sich berufen kann. Aus diesem Grund müssen Bewertungen von weichen Kriterien miteinander verglichen und ständig abgewogen werden. Das war die größte Herausforderung für uns, die die meiste Zeit in Anspruch genommen hat.
+
+Die Nutzwertanalyse war für unsere Zwecke die ideale Methode, um eine fundierte und präsentable Entscheidung zu treffen. Sie wird uns im weiteren Verlauf der Entscheidung und der geplanten Umsetzung helfen.
+
+% section Reflexion (end)
+
+\section{Fazit} % (fold)
+\label{sec:Fazit}
+
+Zusammenfassend lässt sich sagen, dass das Projekt ein vorläufiger Erfolg ist. Es hat uns ermöglicht den Checkpoint-VPN-Client als die für uns beste Lösung auszumachen und hilft uns bei der Begründung der Entscheidung im weiteren Verlauf. Damit wurde das Ziel dieser Arbeit erreicht. In Anbetracht der begrenzten Zeit, die diese Arbeit umfasst, lässt sich dennoch leider nur von einem vorläufigen Erfolg sprechen. Das Projekt ist noch lange nicht abgeschlossen, im Gegenteil, es fängt erst richtig an. Beginnend mit der internen VPN-Harmonisierung, die in ihrer Umsetzung noch in Kinderschuhen steckt, steht als nächster großer Punkt eine Überarbeitung der VPN-Angebote für Kunden bevor. Es ist noch ein weiter Weg, bis die Komm.One eine einheitliche Firma ist.
+
+% section Fazit (end)
+
+% chapter (end)
